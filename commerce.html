@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Commerce & Partner Platforms – Case Study – Ryan Barschaw</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="How I rebuilt commerce systems and partner platforms at Microsoft, replacing legacy tools and creating shared revenue visibility." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a href="/" class="logo">ryan<span>.</span>barschaw</a>
+        <div class="nav-links">
+          <a href="/#work">Work</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="case-hero">
+      <div class="container container--narrow">
+        <div class="breadcrumb">
+          <a href="/">Home</a>
+          <span>→</span>
+          <a href="/#work">Work</a>
+          <span>→</span>
+          <span>Commerce</span>
+        </div>
+        <div class="case-tag">Commerce</div>
+        <h1>Commerce & Partner Platforms</h1>
+        <p class="case-subtitle">
+          Fixing broken purchase systems, retiring legacy tools everyone hated, and finally giving partners and Microsoft the same view of revenue.
+        </p>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">Senior Program Manager</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Company</span>
+            <span class="meta-value">Microsoft Partner Center</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Timeline</span>
+            <span class="meta-value">2015 – 2020</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Scope</span>
+            <span class="meta-value">CSP, Co-sell, ISV Connect</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-content">
+      <div class="container container--narrow">
+
+        <h2>The Problem</h2>
+        <p>
+          Partner Center's commerce systems had grown organically over years. The result was a maze of legacy tools, inconsistent data, and frustrated partners:
+        </p>
+        <ul>
+          <li><strong>CSP purchase flows</strong> were brittle—bad offer configurations caused transaction failures</li>
+          <li><strong>Partner sales tools</strong> were outdated and disconnected from modern CRM systems</li>
+          <li><strong>Revenue visibility</strong> was inconsistent—partners and Microsoft often had different numbers</li>
+          <li><strong>Referral and co-sell programs</strong> existed in silos with no unified view</li>
+        </ul>
+
+        <div class="callout">
+          <div class="callout-title">The real problem</div>
+          These weren't just technical issues—they were trust issues. Partners couldn't trust the data, so they built their own shadow systems. Microsoft couldn't trust partner reports, so they built their own. Everyone was doing double work.
+        </div>
+
+        <h2>What I Did</h2>
+
+        <h3>Fixed CSP Purchase Systems</h3>
+        <p>
+          Took an API-first approach to the CSP purchase and promotions flows. The root cause analysis revealed:
+        </p>
+        <ul>
+          <li><strong>Offer configuration data was often wrong.</strong> SKUs, pricing, regional availability, and eligibility rules were entered manually and frequently had errors.</li>
+          <li><strong>Error messages were useless.</strong> When a transaction failed, partners got generic errors that didn't explain what was wrong or how to fix it.</li>
+          <li><strong>No recovery path.</strong> If something failed partway through, partners had to start over from scratch.</li>
+        </ul>
+        <p>
+          I worked with engineering to build:
+        </p>
+        <ul>
+          <li><strong>Validation at configuration time</strong>—catch errors when offers are created, not when partners try to buy</li>
+          <li><strong>Descriptive error handling</strong>—tell partners exactly what's wrong and what to do about it</li>
+          <li><strong>Transaction recovery</strong>—resume failed purchases instead of starting over</li>
+          <li><strong>Monitoring dashboards</strong>—see failure rates by offer, region, and partner segment in real time</li>
+        </ul>
+
+        <h3>Retired Legacy Sales Tools</h3>
+        <p>
+          The old partner sales tools (OCP, PSC) were widely hated but deeply embedded. Multiple teams depended on them. Their owners had political power. I led the migration to new Co-sell and ISV Connect platforms:
+        </p>
+        <ul>
+          <li><strong>Mapped existing workflows</strong> to understand what people actually used (often different from what was documented)</li>
+          <li><strong>Built CRM integrations</strong> with Dynamics and Salesforce so sellers didn't have to double-enter data</li>
+          <li><strong>Created deal registration flows</strong> that were simpler and faster than the legacy process</li>
+          <li><strong>Designed revenue sharing models</strong> that were clear and auditable</li>
+          <li><strong>Managed the politics</strong> of retiring tools that teams had built careers on—this was the hard part</li>
+        </ul>
+
+        <h3>Created Unified Revenue Visibility</h3>
+        <p>
+          The breakthrough was giving partners and Microsoft the same view of pipeline and revenue for the first time. Before this:
+        </p>
+        <ul>
+          <li>Partners had their own spreadsheets and CRM data</li>
+          <li>Microsoft had internal systems with different numbers</li>
+          <li>Quarterly business reviews were spent reconciling instead of strategizing</li>
+        </ul>
+        <p>
+          I led the effort to:
+        </p>
+        <ul>
+          <li><strong>Reconcile data from multiple source systems</strong> (billing, CRM, partner self-report)</li>
+          <li><strong>Establish clear definitions</strong>—what counts as "revenue"? When? What's "influenced" vs. "transacted"?</li>
+          <li><strong>Build dashboards</strong> that both partners and Microsoft sellers could see and trust</li>
+          <li><strong>Create dispute resolution processes</strong> for when numbers didn't match</li>
+        </ul>
+
+        <h2>Outcomes</h2>
+        <ul>
+          <li><strong>Reduced transaction failures</strong> through better validation and error handling</li>
+          <li><strong>Retired legacy tools</strong> that had been costing money and causing pain for years</li>
+          <li><strong>Unified revenue visibility</strong> that reduced disputes and double-counting</li>
+          <li><strong>CRM integration</strong> that saved sellers hours of manual data entry per week</li>
+        </ul>
+
+        <h2>What I Learned</h2>
+        <ul>
+          <li><strong>Legacy retirement is political, not technical.</strong> The hard part isn't building the new system—it's convincing people to let go of the old one.</li>
+          <li><strong>Data trust is earned slowly.</strong> People don't trust new dashboards immediately. You have to prove they're accurate over time.</li>
+          <li><strong>API-first prevents problems.</strong> Good APIs with validation catch issues before they become incidents.</li>
+        </ul>
+
+        <div class="case-cta">
+          <h3>Want to discuss?</h3>
+          <p>Happy to talk through the approach to legacy retirement or commerce platform design.</p>
+          <a href="mailto:ryan@barschaw.com?subject=Commerce%20Case%20Study" class="btn btn-primary">Get in Touch</a>
+          <a href="/" class="btn btn-secondary">Back to Home</a>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Ryan Barschaw</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+  </body>
+</html>

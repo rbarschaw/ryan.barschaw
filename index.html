@@ -1,0 +1,1304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ryan Barschaw – Principal PM – AI, Platforms, Hard Problems</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Principal Product Manager with 20+ years at Microsoft. I build AI products, lead complex platform programs, and make messy cross-team problems boring in the best way." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Page-specific styles for index.html */
+      :root {
+        --bg-primary: #0a0a0b;
+        --bg-secondary: #111113;
+        --bg-tertiary: #1a1a1d;
+        --bg-elevated: #222226;
+        --accent: #d4a574;
+        --accent-light: #e8c9a8;
+        --accent-dark: #b8956a;
+        --accent-glow: rgba(212, 165, 116, 0.15);
+        --text-primary: #fafafa;
+        --text-secondary: #a1a1aa;
+        --text-tertiary: #71717a;
+        --border: #27272a;
+        --border-light: #3f3f46;
+        --success: #22c55e;
+        --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+        --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+        --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+        --shadow-glow: 0 0 60px rgba(212, 165, 116, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      ::selection {
+        background: var(--accent);
+        color: var(--bg-primary);
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--accent-light);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+
+      /* ========== NAVIGATION ========== */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 20px 0;
+        transition: all 0.3s ease;
+      }
+
+      nav.scrolled {
+        background: rgba(10, 10, 11, 0.9);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 8px;
+      }
+
+      .nav-links a {
+        color: var(--text-secondary);
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 18px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--text-primary);
+        background: var(--bg-tertiary);
+      }
+
+      .nav-cta {
+        background: var(--accent) !important;
+        color: var(--bg-primary) !important;
+        font-weight: 600 !important;
+      }
+
+      .nav-cta:hover {
+        background: var(--accent-light) !important;
+        transform: translateY(-1px);
+      }
+
+      /* Mobile menu */
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        font-size: 24px;
+        cursor: pointer;
+        padding: 8px;
+      }
+
+      /* ========== HERO ========== */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 120px 0 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+      }
+
+      .hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        font-size: 13px;
+        color: var(--text-secondary);
+        margin-bottom: 32px;
+        animation: fadeInUp 0.8s ease;
+      }
+
+      .hero-label .dot {
+        width: 8px;
+        height: 8px;
+        background: var(--success);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 8vw, 80px);
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        line-height: 1.05;
+        margin-bottom: 32px;
+        animation: fadeInUp 0.8s ease 0.1s both;
+      }
+
+      .hero h1 .highlight {
+        color: var(--accent);
+        position: relative;
+      }
+
+      .hero-subtitle {
+        font-size: 20px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 48px;
+        max-width: 600px;
+        animation: fadeInUp 0.8s ease 0.2s both;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        animation: fadeInUp 0.8s ease 0.3s both;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 28px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: var(--bg-primary);
+      }
+
+      .btn-primary:hover {
+        background: var(--accent-light);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .btn-secondary {
+        background: var(--bg-tertiary);
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+      }
+
+      .btn-secondary:hover {
+        background: var(--bg-elevated);
+        border-color: var(--border-light);
+        transform: translateY(-2px);
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 48px;
+        margin-top: 80px;
+        padding-top: 48px;
+        border-top: 1px solid var(--border);
+        animation: fadeInUp 0.8s ease 0.4s both;
+      }
+
+      .stat {
+        text-align: left;
+      }
+
+      .stat-value {
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+      }
+
+      .stat-label {
+        font-size: 14px;
+        color: var(--text-tertiary);
+        margin-top: 4px;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ========== SECTION STYLES ========== */
+      section {
+        padding: 120px 0;
+      }
+
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--accent);
+        margin-bottom: 24px;
+      }
+
+      .section-label::before {
+        content: '';
+        width: 40px;
+        height: 1px;
+        background: var(--accent);
+      }
+
+      .section-title {
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+        max-width: 700px;
+      }
+
+      .section-subtitle {
+        font-size: 18px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        max-width: 600px;
+        margin-bottom: 64px;
+      }
+
+      /* ========== ABOUT ========== */
+      .about {
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .about-content p {
+        font-size: 18px;
+        color: var(--text-secondary);
+        line-height: 1.9;
+        margin-bottom: 24px;
+      }
+
+      .about-content p:first-of-type::first-letter {
+        font-size: 56px;
+        font-weight: 700;
+        color: var(--accent);
+        float: left;
+        line-height: 1;
+        margin-right: 12px;
+        margin-top: 8px;
+      }
+
+      .about-sidebar {
+        position: sticky;
+        top: 120px;
+      }
+
+      .info-card {
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 32px;
+        margin-bottom: 24px;
+      }
+
+      .info-card h3 {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-tertiary);
+        margin-bottom: 20px;
+      }
+
+      .info-list {
+        list-style: none;
+      }
+
+      .info-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 15px;
+        color: var(--text-secondary);
+      }
+
+      .info-list li:last-child {
+        border-bottom: none;
+      }
+
+      .info-list .icon {
+        width: 20px;
+        color: var(--accent);
+        font-family: 'DM Mono', monospace;
+        font-size: 14px;
+      }
+
+      /* ========== HOW I WORK ========== */
+      .how-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+
+      .how-card {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 40px;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .how-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+      }
+
+      .how-card:hover {
+        border-color: var(--border-light);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .how-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .how-number {
+        font-family: 'DM Mono', monospace;
+        font-size: 14px;
+        color: var(--accent);
+        margin-bottom: 20px;
+      }
+
+      .how-card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+      }
+
+      .how-card p {
+        font-size: 15px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+
+      /* ========== WORK / PROJECTS ========== */
+      .work {
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .project-grid {
+        display: grid;
+        gap: 24px;
+      }
+
+      .project-card {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 48px;
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 48px;
+        transition: all 0.4s ease;
+        text-decoration: none;
+      }
+
+      .project-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg), var(--shadow-glow);
+      }
+
+      .project-meta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .project-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        width: fit-content;
+        margin-bottom: 16px;
+      }
+
+      .project-card h3 {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+        color: var(--text-primary);
+      }
+
+      .project-role {
+        font-size: 14px;
+        color: var(--text-tertiary);
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--accent);
+        margin-top: auto;
+      }
+
+      .project-link:hover {
+        gap: 12px;
+      }
+
+      .project-content p {
+        font-size: 16px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      .project-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .highlight-pill {
+        padding: 8px 16px;
+        background: var(--bg-primary);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font-size: 13px;
+        color: var(--text-secondary);
+      }
+
+      /* Featured project */
+      .project-featured {
+        grid-template-columns: 1fr;
+        background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-elevated) 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-featured::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .project-featured .project-inner {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 64px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .project-featured h3 {
+        font-size: 36px;
+      }
+
+      /* ========== RECOGNITION ========== */
+      .recognition-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .recognition-card {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 40px;
+        display: flex;
+        gap: 24px;
+        transition: all 0.3s ease;
+      }
+
+      .recognition-card:hover {
+        border-color: var(--border-light);
+        transform: translateY(-2px);
+      }
+
+      .recognition-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--accent-glow);
+        border: 1px solid var(--accent);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        flex-shrink: 0;
+      }
+
+      .recognition-content h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.02em;
+      }
+
+      .recognition-content p {
+        font-size: 15px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      /* ========== LOOKING FOR ========== */
+      .looking-for {
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .looking-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+      }
+
+      .looking-content h2 {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 32px;
+      }
+
+      .looking-list {
+        list-style: none;
+      }
+
+      .looking-list li {
+        display: flex;
+        gap: 16px;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 17px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .looking-list li:last-child {
+        border-bottom: none;
+      }
+
+      .looking-list .arrow {
+        color: var(--accent);
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+
+      .looking-cta {
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .looking-cta h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+      }
+
+      .looking-cta p {
+        font-size: 16px;
+        color: var(--text-secondary);
+        margin-bottom: 32px;
+        line-height: 1.7;
+      }
+
+      /* ========== CONTACT ========== */
+      .contact {
+        text-align: center;
+        padding: 160px 0;
+      }
+
+      .contact h2 {
+        font-size: clamp(40px, 6vw, 64px);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+      }
+
+      .contact p {
+        font-size: 20px;
+        color: var(--text-secondary);
+        margin-bottom: 48px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 28px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--text-primary);
+        transition: all 0.3s ease;
+      }
+
+      .contact-link:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .contact-link .icon {
+        color: var(--accent);
+      }
+
+      /* ========== FOOTER ========== */
+      footer {
+        padding: 40px 0;
+        border-top: 1px solid var(--border);
+        text-align: center;
+      }
+
+      footer p {
+        font-size: 14px;
+        color: var(--text-tertiary);
+      }
+
+      footer a {
+        color: var(--text-secondary);
+      }
+
+      /* ========== RESPONSIVE ========== */
+      @media (max-width: 1024px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+
+        .about-sidebar {
+          position: static;
+        }
+
+        .how-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .project-card {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .project-featured .project-inner {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .recognition-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .looking-grid {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+
+        .hero-stats {
+          flex-wrap: wrap;
+          gap: 32px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 20px;
+        }
+
+        nav .nav-links {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: var(--bg-primary);
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+        }
+
+        nav .nav-links.active {
+          display: flex;
+        }
+
+        nav .nav-links a {
+          font-size: 24px;
+          padding: 16px 32px;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .hero {
+          padding: 100px 0 60px;
+        }
+
+        .hero-stats {
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        section {
+          padding: 80px 0;
+        }
+
+        .project-card {
+          padding: 32px;
+        }
+
+        .recognition-card {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .contact-links {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="nav">
+      <div class="container nav-inner">
+        <a href="#" class="logo">ryan<span>.</span>barschaw</a>
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#how">How I Work</a>
+          <a href="#work">Work</a>
+          <a href="#contact" class="nav-cta">Get in Touch</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-label">
+            <span class="dot"></span>
+            <span>Content Safety, Responsible AI, Platform Leadership</span>
+          </div>
+          <h1>I make <span class="highlight">messy problems</span> boring.</h1>
+          <p class="hero-subtitle">
+            20+ years at Microsoft building AI products with guardrails, leading platform programs, and turning cross-team chaos into shipped software. From content safety to responsible AI governance, I take the problems no one wants to own and make them work.
+          </p>
+          <div class="hero-actions">
+            <a href="mailto:ryan@barschaw.com?subject=Let's%20talk" class="btn btn-primary">
+              Get in Touch
+            </a>
+            <a href="#work" class="btn btn-secondary">
+              See My Work
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-value">20+</div>
+              <div class="stat-label">Years at Microsoft</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">400K+</div>
+              <div class="stat-label">Partners using my platforms</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">100+</div>
+              <div class="stat-label">Engineers coordinated</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">Top 1%</div>
+              <div class="stat-label">Org recognition</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <div class="section-label">About</div>
+            <div class="section-title">I keep taking on problems I don't know how to solve yet.</div>
+            <p>
+              Twenty years ago I was a contractor building content management systems. I didn't know SharePoint, but I figured it out. Then I moved to Partner Center and had to learn commerce platforms—billing, provisioning, partner lifecycle. Didn't know those either. Figured them out. Cloud migrations, API-first architectures, Agile transformations, responsible AI governance, production LLM systems—same pattern every time.
+            </p>
+            <p>
+              This isn't a humble brag. It's just how I work. When something is unclear, cross-functional, and has no obvious owner, I lean in. I write simple docs that everyone can read the same way. I build telemetry so we can see what's actually happening. I stick around until it's working in production and boring in the best possible way.
+            </p>
+            <p>
+              Most recently, I led responsible AI governance for our production LLM system—building the frameworks that ensure AI outputs are safe, accurate, and trustworthy. This meant partnering with legal, privacy, security, and policy teams to create guardrails that actually work in production. Content safety isn't a checkbox; it's an ongoing discipline of monitoring, measuring, and improving.
+            </p>
+            <p>
+              Some highlights from the last few years:
+            </p>
+            <ul style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.9;">
+              <li>Led the Partner Center AI Assistant from blank page to production—a grounded LLM experience that 400K+ partners actually use</li>
+              <li>Drove zero-downtime migrations of thousands of partners from regional clouds to global infrastructure</li>
+              <li>Fixed CSP purchase systems that were causing transaction failures, reducing support escalations</li>
+              <li>Led Agile/SAFe adoption across a 100+ person engineering organization</li>
+              <li>Built co-sell and referral platforms that gave partners and Microsoft the same view of revenue for the first time</li>
+            </ul>
+            <p>
+              Now I'm looking for my next hard problem. Ideally something with AI, platforms, and real customer impact. Ideally with people who care more about shipping than slides.
+            </p>
+          </div>
+          <aside class="about-sidebar">
+            <div class="info-card">
+              <h3>Details</h3>
+              <ul class="info-list">
+                <li><span class="icon">→</span> Principal Product Manager</li>
+                <li><span class="icon">→</span> Kenmore, WA (Seattle area)</li>
+                <li><span class="icon">→</span> Hybrid or remote</li>
+                <li><span class="icon">→</span> 20+ years experience</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <h3>Focus Areas</h3>
+              <ul class="info-list">
+                <li><span class="icon">→</span> Content Safety & Trust</li>
+                <li><span class="icon">→</span> Responsible AI Governance</li>
+                <li><span class="icon">→</span> AI & LLM Applications</li>
+                <li><span class="icon">→</span> Platform Architecture</li>
+                <li><span class="icon">→</span> Cross-Team Coordination</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I Work -->
+    <section id="how">
+      <div class="container">
+        <div class="section-label">How I Work</div>
+        <h2 class="section-title">What it's like to work with me</h2>
+        <p class="section-subtitle">
+          I've been in enough rooms to know what works. Here's what you get.
+        </p>
+        <div class="how-grid">
+          <div class="how-card">
+            <div class="how-number">01</div>
+            <h3>I write things down</h3>
+            <p>Simple one-pagers that engineering, design, and stakeholders can all read the same way. No 50-page specs that nobody reads. Clear problem, clear solution, clear success criteria.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-number">02</div>
+            <h3>I build the telemetry</h3>
+            <p>If we can't measure it, we can't improve it. I set up dashboards, feedback loops, and incident processes so we know what's actually happening instead of guessing.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-number">03</div>
+            <h3>I stay until it's boring</h3>
+            <p>Shipping is the starting line, not the finish. I stick around through the bugs, the edge cases, and the unexpected production issues until the thing is stable and dull.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-number">04</div>
+            <h3>I work across teams</h3>
+            <p>Most interesting problems span multiple orgs. I build relationships, run the rooms, and make sure everyone's reading from the same playbook.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-number">05</div>
+            <h3>I learn fast</h3>
+            <p>LLMs, cloud migrations, commerce systems, Agile—I've picked up a lot of domains I didn't know before. I ask good questions and get up to speed quickly.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-number">06</div>
+            <h3>I don't wait to be asked</h3>
+            <p>When I see a gap or an opportunity, I jump in. That's how I ended up leading the AI governance work, the design system, and the partner agreement refresh.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="work">
+      <div class="container">
+        <div class="section-label">Work</div>
+        <h2 class="section-title">What I've built</h2>
+        <p class="section-subtitle">
+          Real projects, real outcomes. Not everything I've done, just the stuff that mattered.
+        </p>
+        <div class="project-grid">
+          <!-- Featured: AI Assistant -->
+          <a href="/ai-assistant.html" class="project-card project-featured">
+            <div class="project-inner">
+              <div class="project-meta">
+                <div>
+                  <div class="project-tag">Featured Project</div>
+                  <h3>Partner Center AI Assistant</h3>
+                  <p class="project-role">Principal Product Manager • Microsoft</p>
+                </div>
+                <div class="project-link">
+                  Read Case Study <span>→</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <p>
+                  Led end-to-end delivery of a production LLM experience that 400K+ partners actually use. Took it from blank page to shipped product: defined the architecture, built governance frameworks, set up telemetry, and drove adoption.
+                </p>
+                <p>
+                  The hard part wasn't the AI—it was grounding answers in real account data, making it trustworthy, and getting buy-in from legal, security, and privacy teams. Recognized with the C+E AI Contributor badge.
+                </p>
+                <div class="project-highlights">
+                  <span class="highlight-pill">LLM / Copilot</span>
+                  <span class="highlight-pill">Responsible AI</span>
+                  <span class="highlight-pill">Production System</span>
+                  <span class="highlight-pill">400K+ Users</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Cloud Migrations -->
+          <a href="/migrations.html" class="project-card">
+            <div class="project-meta">
+              <div>
+                <div class="project-tag">Platform</div>
+                <h3>Zero-Downtime Cloud Migrations</h3>
+                <p class="project-role">Senior Program Manager • Microsoft</p>
+              </div>
+              <div class="project-link">
+                Read More <span>→</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Moved thousands of partners from German and US Gov clouds to global infrastructure. Everyone said it was impossible without downtime. We did it anyway.
+              </p>
+              <p>
+                Coordinated across engineering, operations, support, and partner readiness. Built playbooks, planned for failure modes, and ran the war rooms.
+              </p>
+              <div class="project-highlights">
+                <span class="highlight-pill">Zero Downtime</span>
+                <span class="highlight-pill">Multi-Team</span>
+                <span class="highlight-pill">Global Scale</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Commerce Platform -->
+          <a href="/commerce.html" class="project-card">
+            <div class="project-meta">
+              <div>
+                <div class="project-tag">Commerce</div>
+                <h3>Commerce & Partner Platforms</h3>
+                <p class="project-role">Senior Program Manager • Microsoft</p>
+              </div>
+              <div class="project-link">
+                Read More <span>→</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Fixed CSP purchase systems, built co-sell and referral platforms, retired legacy tools that everyone hated but nobody would touch.
+              </p>
+              <p>
+                Gave partners and Microsoft the same view of pipeline and revenue for the first time. API-first approach that reduced configuration-related incidents.
+              </p>
+              <div class="project-highlights">
+                <span class="highlight-pill">API-First</span>
+                <span class="highlight-pill">Revenue Systems</span>
+                <span class="highlight-pill">Legacy Migration</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Agile Transformation -->
+          <a href="/agile.html" class="project-card">
+            <div class="project-meta">
+              <div>
+                <div class="project-tag">Process</div>
+                <h3>Agile Transformation</h3>
+                <p class="project-role">Senior Program Manager • Microsoft</p>
+              </div>
+              <div class="project-link">
+                Read More <span>→</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Led Agile/SAFe adoption across a 100+ person engineering team. Introduced Scrum, PI planning, and sprint hygiene that actually stuck.
+              </p>
+              <p>
+                Recognized in the top 1% of the org for execution and cross-team alignment. Not for a single launch, but for consistent delivery.
+              </p>
+              <div class="project-highlights">
+                <span class="highlight-pill">100+ Person Team</span>
+                <span class="highlight-pill">Top 1%</span>
+                <span class="highlight-pill">SAFe</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recognition -->
+    <section>
+      <div class="container">
+        <div class="section-label">Recognition</div>
+        <h2 class="section-title">What others noticed</h2>
+        <div class="recognition-grid">
+          <div class="recognition-card">
+            <div class="recognition-icon">🏆</div>
+            <div class="recognition-content">
+              <h3>Top 1% Recognition</h3>
+              <p>Recognized for driving execution and cross-team alignment across a 100+ person engineering organization. Consistent delivery over years, not a single launch.</p>
+            </div>
+          </div>
+          <div class="recognition-card">
+            <div class="recognition-icon">🤖</div>
+            <div class="recognition-content">
+              <h3>C+E AI Contributor Badge</h3>
+              <p>Microsoft recognition for championing responsible AI adoption and governance practices. Made AI governance a real thing, not just a checkbox.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Looking For -->
+    <section class="looking-for">
+      <div class="container">
+        <div class="looking-grid">
+          <div class="looking-content">
+            <div class="section-label">What's Next</div>
+            <h2>What I'm looking for</h2>
+            <ul class="looking-list">
+              <li>
+                <span class="arrow">→</span>
+                <span>Principal-level PM or TPM roles where AI, platforms, and real customer problems come together.</span>
+              </li>
+              <li>
+                <span class="arrow">→</span>
+                <span>Teams that value clear writing, honest telemetry, and shipping over slides and meetings.</span>
+              </li>
+              <li>
+                <span class="arrow">→</span>
+                <span>Work that spans multiple engineering groups, with enough ownership to see problems through from idea to stable production.</span>
+              </li>
+              <li>
+                <span class="arrow">→</span>
+                <span>People who are direct, curious, and care about getting it right more than being right.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="looking-cta">
+            <h3>Let's see if there's a fit</h3>
+            <p>
+              If you're hiring for a principal-level PM or TPM role and this sounds useful, I'm happy to chat. No pressure, just a conversation.
+            </p>
+            <a href="mailto:ryan@barschaw.com?subject=Let's%20talk" class="btn btn-primary">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Let's talk.</h2>
+        <p>
+          Always happy to connect with people working on interesting problems.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:ryan@barschaw.com" class="contact-link">
+            <span class="icon">✉</span>
+            <span>ryan@barschaw.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ryanbarschaw" target="_blank" rel="noreferrer" class="contact-link">
+            <span class="icon">in</span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="tel:+14257365280" class="contact-link">
+            <span class="icon">☎</span>
+            <span>425-736-5280</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Ryan Barschaw · Built with care, no trackers</p>
+      </div>
+    </footer>
+
+    <script>
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Scroll nav
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.getElementById('navLinks').classList.remove('active');
+          }
+        });
+      });
+
+      // Mobile menu
+      document.getElementById('menuToggle').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('active');
+      });
+    </script>
+
+  </body>
+</html>
