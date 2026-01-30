@@ -5,12 +5,46 @@
     <title>Ryan Barschaw – Principal PM – AI, Platforms, Hard Problems</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Principal Product Manager with 20+ years at Microsoft. I build AI products, lead complex platform programs, and make messy cross-team problems boring in the best way." />
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ryan.barschaw.com/" />
+    <meta property="og:title" content="Ryan Barschaw – Principal PM – AI, Platforms, Hard Problems" />
+    <meta property="og:description" content="Principal Product Manager with 20+ years at Microsoft. I build AI products, lead complex platform programs, and make messy cross-team problems boring in the best way." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ryan Barschaw – Principal PM – AI, Platforms, Hard Problems" />
+    <meta name="twitter:description" content="Principal Product Manager with 20+ years at Microsoft. I build AI products, lead complex platform programs, and make messy cross-team problems boring in the best way." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
       /* Page-specific styles for index.html */
+      
+      /* Accessibility */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #d4a574;
+        color: #0a0a0b;
+        padding: 8px 16px;
+        z-index: 1000;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 0 0 8px 0;
+        transition: top 0.3s ease;
+      }
+      
+      .skip-link:focus {
+        top: 0;
+      }
+      
       :root {
         --bg-primary: #0a0a0b;
         --bg-secondary: #111113;
@@ -901,14 +935,18 @@
     </style>
   </head>
   <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav id="nav">
+    <nav id="nav" role="navigation" aria-label="Main navigation">
       <div class="container nav-inner">
         <a href="#" class="logo">ryan<span>.</span>barschaw</a>
         <div class="nav-links" id="navLinks">
           <a href="#about">About</a>
           <a href="#how">How I Work</a>
           <a href="#work">Work</a>
+          <a href="/resume.html">Resume</a>
           <a href="#contact" class="nav-cta">Get in Touch</a>
         </div>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
@@ -916,6 +954,7 @@
     </nav>
 
     <!-- Hero -->
+    <main id="main-content">
     <section class="hero">
       <div class="container">
         <div class="hero-content">
@@ -1249,21 +1288,22 @@
           Always happy to connect with people working on interesting problems.
         </p>
         <div class="contact-links">
-          <a href="mailto:ryan@barschaw.com" class="contact-link">
-            <span class="icon">✉</span>
+          <a href="mailto:ryan@barschaw.com" class="contact-link" aria-label="Email Ryan at ryan@barschaw.com">
+            <span class="icon" aria-hidden="true">✉</span>
             <span>ryan@barschaw.com</span>
           </a>
-          <a href="https://www.linkedin.com/in/ryanbarschaw" target="_blank" rel="noreferrer" class="contact-link">
-            <span class="icon">in</span>
+          <a href="https://www.linkedin.com/in/ryanbarschaw" target="_blank" rel="noreferrer" class="contact-link" aria-label="View Ryan's LinkedIn profile (opens in new tab)">
+            <span class="icon" aria-hidden="true">in</span>
             <span>LinkedIn</span>
           </a>
-          <a href="tel:+14257365280" class="contact-link">
-            <span class="icon">☎</span>
+          <a href="tel:+14257365280" class="contact-link" aria-label="Call Ryan at 425-736-5280">
+            <span class="icon" aria-hidden="true">☎</span>
             <span>425-736-5280</span>
           </a>
         </div>
       </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>

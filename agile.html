@@ -5,22 +5,43 @@
     <title>Agile Transformation – Case Study – Ryan Barschaw</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="How I led Agile/SAFe transformation across a 100+ person engineering team, earning top 1% recognition for execution." />
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ryan.barschaw.com/agile.html" />
+    <meta property="og:title" content="Agile Transformation – Case Study – Ryan Barschaw" />
+    <meta property="og:description" content="How I led Agile/SAFe transformation across a 100+ person engineering team, earning top 1% recognition for execution." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Agile Transformation – Case Study – Ryan Barschaw" />
+    <meta name="twitter:description" content="How I led Agile/SAFe transformation across a 100+ person engineering team, earning top 1% recognition for execution." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <nav>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/" class="logo">ryan<span>.</span>barschaw</a>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
+          <a href="/">Home</a>
           <a href="/#work">Work</a>
+          <a href="/resume.html">Resume</a>
           <a href="/#contact">Contact</a>
         </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
       </div>
     </nav>
 
+    <main id="main-content">
     <section class="case-hero">
       <div class="container container--narrow">
         <div class="breadcrumb">
@@ -164,6 +185,7 @@
 
       </div>
     </section>
+    </main>
 
     <footer>
       <div class="container">
@@ -173,6 +195,11 @@
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Mobile menu toggle
+      document.getElementById('menuToggle').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('active');
+      });
     </script>
 
   </body>
