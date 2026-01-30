@@ -170,6 +170,17 @@ nav .nav-inner {
   transform: translateY(-1px);
 }
 
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+}
+
 /* ========== BUTTONS ========== */
 .btn {
   display: inline-flex;
@@ -543,6 +554,36 @@ footer a {
 
   nav .nav-inner {
     padding: var(--space-md) 20px;
+  }
+
+  /* Mobile navigation */
+  nav .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-primary);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    z-index: 99;
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  nav .nav-links a {
+    font-size: 24px;
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 101;
   }
 
   .case-hero {

@@ -5,6 +5,15 @@
     <title>Partner Center AI Assistant – Case Study – Ryan Barschaw</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="How I led the Partner Center AI Assistant from blank page to production: content safety, responsible AI governance, guardrails, and lessons learned." />
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ryan.barschaw.com/ai-assistant.html" />
+    <meta property="og:title" content="Partner Center AI Assistant – Case Study – Ryan Barschaw" />
+    <meta property="og:description" content="How I led the Partner Center AI Assistant from blank page to production: content safety, responsible AI governance, guardrails, and lessons learned." />
+    <meta property="og:image" content="https://ryan.barschaw.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,10 +23,11 @@
     <nav>
       <div class="nav-inner">
         <a href="/" class="logo">ryan<span>.</span>barschaw</a>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
           <a href="/#work">Work</a>
-          <a href="/#contact">Contact</a>
+          <a href="/#contact" class="nav-cta">Contact</a>
         </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
       </div>
     </nav>
 
@@ -338,6 +348,10 @@
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      // Mobile menu toggle
+      document.getElementById('menuToggle').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('active');
+      });
     </script>
 
   </body>

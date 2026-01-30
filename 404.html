@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Not Found – Ryan Barschaw</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="The page you're looking for doesn't exist." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      .error-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+      }
+      .error-content {
+        max-width: 500px;
+      }
+      .error-code {
+        font-size: clamp(80px, 15vw, 120px);
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: -0.05em;
+        line-height: 1;
+        margin-bottom: 16px;
+      }
+      .error-title {
+        font-size: clamp(24px, 4vw, 32px);
+        font-weight: 700;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+      }
+      .error-message {
+        font-size: 18px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a href="/" class="logo">ryan<span>.</span>barschaw</a>
+        <div class="nav-links" id="navLinks">
+          <a href="/#work">Work</a>
+          <a href="/#contact" class="nav-cta">Contact</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </nav>
+
+    <section class="error-page">
+      <div class="error-content">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page not found</h1>
+        <p class="error-message">
+          The page you're looking for doesn't exist or has been moved. Let me help you find your way back.
+        </p>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById('menuToggle').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('active');
+      });
+    </script>
+
+  </body>
+</html>
